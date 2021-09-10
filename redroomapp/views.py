@@ -22,6 +22,15 @@ def home(request):
     return render(request, 'home.html', context = {"products":products})
     
     
+
+
+
+
+
+
 def payment(request):
-	return render(request,'payment.html')
+    products = Product.objects.all()
+    return render(request,'payment.html',context = {"products":products})
+
+	
 
